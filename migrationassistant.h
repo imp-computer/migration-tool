@@ -17,7 +17,7 @@ public:
 
     MigrationAssistant();
 
-    QString loadDirectory(QString path);
+    QSet<QString> loadDirectory(QString path);
     void upload();
     void evaluateResult();
 

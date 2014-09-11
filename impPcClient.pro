@@ -19,14 +19,16 @@ SOURCES += main.cpp\
     qwebdav/QWebDAV.cpp \
     migrationassistant.cpp \
     SyncQtOwnCloud.cpp \
-    sqlite3_util.cpp
+    sqlite3_util.cpp \
+    treebuilder.cpp
 
 HEADERS  += mainwindow.h \
     filetree.h \
     qwebdav/QWebDAV.h \
     migrationassistant.h \
     SyncQtOwnCloud.h \
-    sqlite3_util.h
+    sqlite3_util.h \
+    treebuilder.h
 
 FORMS    += mainwindow.ui
 

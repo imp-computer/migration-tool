@@ -1,6 +1,7 @@
 #include "migrationassistant.h"
 #include "qwebdav/QWebDAV.h"
 #include "SyncQtOwnCloud.h"
+#include "treebuilder.h"
 
 
 MigrationAssistant::MigrationAssistant() :m_fileTree(m_namePool)
@@ -9,8 +10,18 @@ MigrationAssistant::MigrationAssistant() :m_fileTree(m_namePool)
     upload();
 }
 
+QSet<QString> MigrationAssistant::loadDirectory(QString directory)
+{
+    treeBuilder builder;
+    builder.mFilesFound.clear();
+    builder.scanDirectory(directory);
+    return builder.mFilesFound;
+}
+
+/*
 QString MigrationAssistant::loadDirectory(QString directory)
 {
+
     qDebug() << "started loadDirectory!" << endl;
     //QString directory = QDir::rootPath();
     //QString directory = "/Users/dafnathary/Documents/imp";
@@ -38,7 +49,7 @@ QString MigrationAssistant::loadDirectory(QString directory)
 
 //! [6]
 }
-
+*/
 void MigrationAssistant::evaluateResult()
 {
 
@@ -58,6 +69,7 @@ void MigrationAssistant::evaluateResult()
 
 void MigrationAssistant::upload()
 {
+
     /*
     SyncQtOwnCloud *account = new SyncQtOwnCloud("test",new QSet<QString>(), "");
     account->initialize(
@@ -67,7 +79,7 @@ void MigrationAssistant::upload()
 
 
     //account->upload(SyncQtOwnCloud::FileInfo("photo.JPG",100));
-    */
 
+*/
 
 }
