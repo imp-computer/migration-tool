@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>queries/impFileFilter.xq</file>
+        <file>queries/wholeTree.xq</file>
+    </qresource>
+</RCC>
