@@ -20,7 +20,14 @@ SOURCES += main.cpp\
     migrationassistant.cpp \
     SyncQtOwnCloud.cpp \
     sqlite3_util.cpp \
-    treebuilder.cpp
+    treebuilder.cpp \
+    account.cpp \
+    networkjobs.cpp \
+    creds/abstractcredentials.cpp \
+    cookiejar.cpp \
+    3rdparty/qjson/json.cpp \
+    creds/httpcredentials.cpp \
+    mirallaccessmanager.cpp
 
 HEADERS  += mainwindow.h \
     filetree.h \
@@ -28,7 +35,14 @@ HEADERS  += mainwindow.h \
     migrationassistant.h \
     SyncQtOwnCloud.h \
     sqlite3_util.h \
-    treebuilder.h
+    treebuilder.h \
+    account.h \
+    networkjobs.h \
+    creds/abstractcredentials.h \
+    cookiejar.h \
+    3rdparty/qjson/json.h \
+    creds/httpcredentials.h \
+    mirallaccessmanager.h
 
 FORMS    += mainwindow.ui
 
