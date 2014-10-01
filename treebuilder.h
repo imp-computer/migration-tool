@@ -1,7 +1,11 @@
 #ifndef TREEBUILDER_H
 #define TREEBUILDER_H
 
+#ifdef __linux__
+#include<QSet>
+#else
 #include<Qset>
+#endif
 #include<QString>
 #include<QFileInfo>
 

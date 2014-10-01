@@ -46,9 +46,17 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-INCLUDEPATH += /usr/local/Cellar/qtkeychain/0.3/include
-LIBS += /usr/local/Cellar/qtkeychain/0.3/lib/libqt5keychain.dylib
-LIBS += /usr/local/Cellar/sqlite/3.8.6/lib/libsqlite3.dylib
+unix {
+    macx {
+        LIBS += -L/usr/local/Cellar/qtkeychain/0.3/lib -lqt5keychain \
+                -L/usr/local/Cellar/sqlite/3.8.6/lib/lib -lsqlite3
+        INCLUDEPATH += /usr/local/Cellar/qtkeychain/0.3/include
+    }
+    else {
+        INCLUDEPATH += /usr/include/qt5keychain
+        LIBS += -lqt5keychain -lsqlite3
+    }
+}
 
 RESOURCES += \
     queries.qrc
